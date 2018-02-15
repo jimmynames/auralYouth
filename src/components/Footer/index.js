@@ -131,7 +131,7 @@ export default class FooterComp extends React.Component {
     return (
       <Footer>
         <Wrap>
-        <Column class="footer__column">
+        <Column>
           <Row1 flex>
             <H3>Get in touch</H3>
           </Row1>
@@ -155,7 +155,7 @@ export default class FooterComp extends React.Component {
                       </g>
                   </g>
               </svg>
-                <p class="connect__cta__copy">info@auralyouth.co.uk</p>
+                <p>info@auralyouth.co.uk</p>
             </ConnectCta>
 
             <ConnectCta href="">
@@ -174,7 +174,7 @@ export default class FooterComp extends React.Component {
                       </g>
                   </g>
               </svg>
-                <p class="connect__cta__copy">+44 (0) 759 548 4005</p>
+                <p>+44 (0) 759 548 4005</p>
             </ConnectCta>
           </Row3>
 
