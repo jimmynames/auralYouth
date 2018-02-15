@@ -69,6 +69,17 @@ const RowShared = (theme) => {
 
 const Row1 = styled.div`
   ${props => props.flex ? RowShared(props.theme) : null};
+  position: relative;
+  &:after {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: white;
+    position: absolute;
+    bottom: -16px;
+    left: 0;
+  }
 `
 
 const Row2 = styled.div`
