@@ -6,29 +6,17 @@ import Link from "gatsby-link"
 import Helmet from "react-helmet"
 import styled  from 'styled-components'
 
+import FooterComp from './../components/Footer'
+
 const Background = styled.div`
   height: 100vh;
   width: 100vw;
 `
 
-const Layout = styled.div`
-  @media (max-width: 693px) {}
-`
 const Wrap = styled.div`
 	max-width: 1200px;
   margin: 0 auto;
 `
-
-// const Logo = styled.img`
-//   width: 100%;
-//   padding-top: 1.25rem;
-//   margin: 0;
-//   @media (max-width: 693px) {
-//     padding-top: 0;
-//     width: 50%;
-//     margin: 0 auto;
-//   }
-// `
 
 const PageRender = styled.div`
   width: 100%;
@@ -72,7 +60,6 @@ export default class Template extends React.Component {
     return (
       <Background>
       <Wrap>
-        <Layout className="Layout">
 
         <Helmet
           title="Aural Youth"
@@ -86,7 +73,7 @@ export default class Template extends React.Component {
           {this.props.children()}
         </PageRender>
 
-      </Layout>
+        <FooterComp />
       </Wrap>
     </Background>
     )
