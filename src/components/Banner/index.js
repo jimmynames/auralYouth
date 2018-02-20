@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import Link from 'gatsby-link'
+import { Link, DirectLink, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+
+import NavMenuComp from './../../components/NavMenu'
 
 // import mouse from './../images/mouse.gif'
 
@@ -24,7 +26,7 @@ const Logo = styled.div`
   align-items: center;
 `
 
-const NavMenu = styled.ul`
+const NavMenu = styled.div`
   margin: 0;
   padding: 0;
   display: flex;
@@ -43,7 +45,7 @@ const NavMenu = styled.ul`
   @media (max-width: 693px) {}
 `
 
-const NavItem = styled.li`
+const NavItem = styled.div`
   list-style-type: none;
   margin-left: ${props => props.first ? '0' : '3em'};
   font-size: 1.17em;
@@ -54,6 +56,10 @@ const NavItem = styled.li`
   color: white;
   font-family: 'Lato';
   font-weight: 900;
+
+  &:hover {
+    cursor: pointer;
+  }
 `
 
 export default class BannerComp extends React.Component {
@@ -77,16 +83,12 @@ export default class BannerComp extends React.Component {
           </svg>
         </Logo>
         <NavMenu>
-          <Link to='/'>
-            <NavItem first>About</NavItem>
+
+          <NavMenuComp />
+          <Link to="footer" spy={true} smooth={true} offset={50} duration={750}>
+            <NavItem>Contact</NavItem>
           </Link>
-          <Link to='/services/'>
-            <NavItem>Services</NavItem>
-          </Link>
-          <Link to='/services/'>
-            <NavItem>Clients</NavItem>
-          </Link>
-          <NavItem>Contact</NavItem>
+
         </NavMenu>
       </Banner>
     )

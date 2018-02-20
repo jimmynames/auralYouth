@@ -23,6 +23,7 @@ const ImageText = styled.div`
     display: block;
     height: auto;
     margin-bottom: 80px;
+    transition: all 0.3s ease-out;
   }
 `
 
@@ -35,6 +36,7 @@ const ImageComp = styled.div`
     width: 50%;
     margin: 0 auto;
     margin-bottom: 3em;
+    transition: all 3s ease;
   }
 `
 
@@ -53,6 +55,7 @@ const ImageImage = styled.img`
   @media (max-width: 900px) {
     width: 100%;
     position: relative;
+    transition: all 3s ease;
   }
 `
 
@@ -66,6 +69,7 @@ const CopyComp = styled.div`
   align-content: center;
   @media (max-width: 900px) {
     width: 100%;
+    transition: all 3s ease;
   }
 `
 

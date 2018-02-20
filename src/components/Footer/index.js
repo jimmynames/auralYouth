@@ -2,11 +2,20 @@ import React from 'react'
 import styled from 'styled-components'
 // import { Wrap } from '../../components/Wrap'
 
+import * as Scroll from 'react-scroll'
+let Element = Scroll.Element
+
+
 const Footer = styled.footer`
   height: auto;
   background: black;
-  padding-top: 60px;
-  padding-bottom: 80px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  ${'' /* padding-top: 60px; */}
+  ${'' /* padding-bottom: 80px; */}
   ${'' /* background: ${props => props.theme.background}; */}
 `
 
@@ -129,6 +138,7 @@ const SocialCta = styled.a`
 export default class FooterComp extends React.Component {
   render () {
     return (
+      <Element name="footer">
       <Footer>
         <Wrap>
         <Column>
@@ -218,6 +228,7 @@ export default class FooterComp extends React.Component {
         </Column>
       </Wrap>
     </Footer>
+    </Element>
     )
   }
 }
