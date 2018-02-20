@@ -9,6 +9,13 @@ const Copy = styled.p`
   -webkit-margin-before: 0;
   -webkit-margin-after: 0;
   margin-bottom: 32px;
+
+  @media (max-width:589px) {
+    font-size: 18px;
+  }
+  @media (max-width:453px) {
+    font-size: 16px;
+  }
 `
 
 export default Copy

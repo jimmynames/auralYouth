@@ -71,10 +71,10 @@ export default class ImageTextComp extends React.Component {
     return (
       <ImageText>
         <ImageComp>
-          <ImageImage src="https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAAikAAAAJDlmZDg5MTUyLTM4YjItNDVhZi05ZWY0LTNjN2QyYWJlNWU4Zg.png" />
+          <ImageImage src={this.props.src} srcSet={this.props.src + ' 1x, ' + this.props.src2x + ' 2x'} />
         </ImageComp>
         <CopyComp>
-          <Title>something about somrhing</Title>
+          <Title>{this.props.title}</Title>
           <Copy>A forward-looking, sound production collective based in North
             London. We provide technical and creative services for the ever c
             hanging music industry.  

@@ -13,5 +13,12 @@ const Title = styled.h1`
   ${'' /* background: ${props => props.theme.background} */}
   letter-spacing: -0.07px;
   margin-bottom: 50px;
+
+  @media (max-width:589px) {
+    font-size: 30px;
+  }
+  @media (max-width:453px) {
+    font-size: 26px;
+  }
 `
 export default Title

@@ -30,26 +30,6 @@ const Container = styled.div`
   position: relative;
 `
 
-
-const NavMenu = styled.ul`
-  text-decoration: none;
-  margin: 0;
-  padding: 0;
-
-  @media (max-width: 693px) {}
-`
-
-const NavItem = styled.li`
-  list-style-type: none;
-  text-decoration: none;
-  margin-left: 3em;
-  text-decoration: none;
-  font-size: 1.17em;
-  color: black;
-  letter-spacing: 1px;
-  -webkit-font-smoothing: antialiased;
-`
-
 // const theme = {
 // 	header: '40px',
 // 	copy: '20px',

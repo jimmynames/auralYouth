@@ -11,7 +11,7 @@ const Banner = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   align-content: center;
 `
@@ -51,7 +51,7 @@ const NavItem = styled.li`
   -webkit-font-smoothing: antialiased;
 
   text-decoration: none;
-  color: black;
+  color: white;
   font-family: 'Lato';
   font-weight: 900;
 `
