@@ -22,6 +22,7 @@ const ImageText = styled.div`
   @media (max-width: 900px) {
     display: block;
     height: auto;
+    margin-bottom: 80px;
   }
 `
 
@@ -46,9 +47,8 @@ const ImageImage = styled.img`
   ${'' /* top: 10px;
   left: 10px; */}
   left: ${props => props.alt ? '' : '10px'};
-  top: ${props => props.alt ? '' : '10px'};
-  right: ${props => props.alt ? '10px' : '0'};
-  bottom: ${props => props.alt ? '10px' : '0'};
+  top: ${props => props.alt ? '15px' : '15px'};
+  right: ${props => props.alt ? '15px' : '0'};
 
   @media (max-width: 900px) {
     width: 100%;
