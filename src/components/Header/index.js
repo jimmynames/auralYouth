@@ -1,33 +1,41 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import Title from './../../components/Title'
+
+const HeaderWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+`
+
 const Header = styled.div`
   width: 75%;
   text-align: center;
-  margin: 0 auto;
+
   margin-bottom: 120px;
   margin-top: 90px;
+
+  @media (max-width: 900px) |{
+    width: 100%;
+  }
 `
 
-const Title = styled.h1`
-  font-family: 'Lato', sans-serif;
-  font-weight: 700;
-  font-family: Lato-Bold;
-  font-size: 40px;
-  font-size: ${props => props.theme.header};
-  color: #000000;
-  background: ${props => props.theme.background}
-  letter-spacing: -0.07px;
-  margin-bottom: 50px;
+const SVG = styled.svg`
+  width: 100%;
 `
 
 export default class HeaderComp extends React.Component {
   render () {
     return (
+      <HeaderWrapper>
         <Header>
           <Title>Technical and creative audio services for  the modern music industy.</Title>
 
-          <svg width="485px" height="35px" viewBox="0 0 485 35" version="1.1">
+          <SVG width="485px" height="35px" viewBox="0 0 485 35" version="1.1">
               <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                   <g id="Home-page" transform="translate(-408.000000, -797.000000)">
                       <g id="break" transform="translate(409.000000, 797.000000)">
@@ -41,8 +49,10 @@ export default class HeaderComp extends React.Component {
                       </g>
                   </g>
               </g>
-          </svg>
+          </SVG>
         </Header>
+      </HeaderWrapper>
+
     )
   }
 }

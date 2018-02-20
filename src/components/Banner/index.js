@@ -6,7 +6,8 @@ import Link from 'gatsby-link'
 
 const Banner = styled.div`
   height: 100vh;
-  background: ${props => props.theme.background};
+  background: black;
+  ${'' /* background: ${props => props.theme.background}; */}
   width: 100%;
   display: flex;
   flex-direction: column;

@@ -7,6 +7,7 @@ const Footer = styled.footer`
   background: black;
   padding-top: 60px;
   padding-bottom: 80px;
+  ${'' /* background: ${props => props.theme.background}; */}
 `
 
 const Wrap = styled.div`

@@ -1,28 +1,16 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
-import styled from 'styled-components'
-
-import { ThemeProvider } from 'styled-components'
+import styled, {ThemeProvider} from 'styled-components'
 // import { background, headerSize } from './../../global-variables'
 
 const HTML = styled.html`
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  background: black;
-
-  body {
-    background: black !important;
-  }
 `
 
 const Body = styled.body`
-  background: black !important;
-  margin: 0;
 `
 
 const App = styled.div`
-  background: black;
-  box-sizing: border-box;
 `
 
 
@@ -44,21 +32,21 @@ export default class HTML extends React.Component {
   render() {
     const head = Helmet.rewind()
 
-    let css
-    if (process.env.NODE_ENV === "production") {
-      css = (
-        <style
-          dangerouslySetInnerHTML={{
-            __html: require("!raw!../public/styles.css"),
-            'background': 'black !important;'
-          }}
-        />
-      )
-    }
+    // let css
+    // if (process.env.NODE_ENV === "production") {
+    //   css = (
+    //     <style
+    //       dangerouslySetInnerHTML={{
+    //         __html: require("!raw!../public/styles.css"),
+    //         'background': 'black !important;'
+    //       }}
+    //     />
+    //   )
+    // }
 
     return (
-
-      <HTML lang="en" style="background:black !important;">
+      // <ThemeProvider className="themeprovider" theme={theme}>
+      <HTML lang="en">
         <head>
           <meta charSet="utf-8" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -69,17 +57,16 @@ export default class HTML extends React.Component {
           {this.props.headComponents}
         </head>
         <Body>
-          <ThemeProvider theme={theme}>
-
           <App
             id="___gatsby"
             dangerouslySetInnerHTML={{ __html: this.props.body }}
           />
 
           {this.props.postBodyComponents}
-          </ThemeProvider>
+
         </Body>
       </HTML>
+      // </ThemeProvider>
     )
   }
 }
