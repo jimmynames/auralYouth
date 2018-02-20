@@ -33,10 +33,20 @@ const ImageComp = styled.div`
   border: 3px solid black;
   position: relative;
   @media (max-width: 900px) {
-    width: 50%;
+    width: 66.6%;
     margin: 0 auto;
     margin-bottom: 3em;
-    transition: all 3s ease;
+    transition: all .3s ease-in-out;
+  }
+  @media (max-width: 750px) {
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 3em;
+    transition: all .3s ease-in-out;
+  }
+  @media (max-width: 500px) {
+    width: 90%;
+    transition: all .3s ease-in-out;
   }
 `
 

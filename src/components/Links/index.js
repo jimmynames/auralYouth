@@ -37,7 +37,7 @@ const NavMenu = styled.div`
   @media (max-width: 693px) {}
 `
 
-export default class NavMenuComp extends React.Component {
+export default class Links extends React.Component {
   render () {
     return (
       <NavMenu>

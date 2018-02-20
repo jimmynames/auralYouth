@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Link, animateScroll as scroll } from 'react-scroll'
 import { StickyContainer, Sticky } from 'react-sticky'
 
-import NavMenuComp from './../../components/NavMenu'
+import Navigation from './../../components/Nav'
 
 // import mouse from './../images/mouse.gif'
 
@@ -50,9 +50,15 @@ const NavItem = styled.div`
   color: white;
   font-family: 'Lato';
   font-weight: 900;
-  padding-bottom: 16px;
+  padding-bottom: 13px;
+  border-bottom: 3px solid black;
   &:hover {
     cursor: pointer;
+  }
+  &:focus,
+  &:active {
+    border-bottom: 3px solid white;
+    transition: all 0.3s ease-in-out;
   }
 `
 
@@ -93,12 +99,7 @@ export default class BannerComp extends React.Component {
 
               return (
                 <header style={style}> */}
-                  <NavMenu>
-                    <NavMenuComp />
-                    <Link to="footer" spy={true} smooth={true} offset={50} duration={750}>
-                      <NavItem>Contact</NavItem>
-                    </Link>
-                  </NavMenu>
+                  <Navigation />
                 {/* </header>
               )
             }
