@@ -1,20 +1,21 @@
 import React from 'react'
-import styled from 'styled-components'
+import HeaderComp from './../components/Header'
+import ImageTextComp from './../components/ImageText'
+import TestimonialComp from './../components/Testimonials'
 
-const Page = styled.div`
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-`
+import dude from './../images/dude.jpg'
+import dude2x from './../images/dude@2x.jpg'
+
 export default class Clients extends React.Component {
   render () {
     return (
-      <Page />
+      <div>
+        <HeaderComp />
+
+        <ImageTextComp src={dude} src2x={dude2x} title="Clients" alt />
+
+        <TestimonialComp />
+      </div>
     )
   }
 }

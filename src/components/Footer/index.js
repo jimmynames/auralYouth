@@ -5,7 +5,6 @@ import styled from 'styled-components'
 import * as Scroll from 'react-scroll'
 let Element = Scroll.Element
 
-
 const Footer = styled.footer`
   height: auto;
   background: black;
@@ -126,6 +125,7 @@ const ConnectCta = styled.a`
         color: white;
         text-decoration: none;
         margin: 0 35px;
+        transition: all .2s ease-in-out;
 
         svg {
           margin-right: 25px;
@@ -140,6 +140,10 @@ const ConnectCta = styled.a`
           letter-spacing: -0.03px;
         }
 
+        &:hover {
+          transform: scale(1.02666);
+        }
+
         @media (max-width: 674px) {
           margin-top: 17.5px;
         }
@@ -147,6 +151,10 @@ const ConnectCta = styled.a`
 
 const SocialCta = styled.a`
   margin: 0 13px;
+  transition: all .3 ease;
+  &:hover {
+    transform: scale(1.13666);
+  }
 `
 
 export default class FooterComp extends React.Component {
