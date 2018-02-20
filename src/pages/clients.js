@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Page } from './../components/Page'
 
 // const Page = styled.div`
 //   width: 100%;
@@ -12,10 +11,8 @@ import { Page } from './../components/Page'
 //   align-items: center;
 //   align-content: center;
 // `
-export default class Index extends React.Component {
+export default class Services extends React.Component {
   render () {
-    return (
-      <Page />
-    )
+    // return ()
   }
 }

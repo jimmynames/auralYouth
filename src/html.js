@@ -1,7 +1,10 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
-import styled from 'styled-components';
+import styled from 'styled-components'
+
+import { ThemeProvider } from 'styled-components'
+// import { background, headerSize } from './../../global-variables'
 
 const HTML = styled.html`
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
@@ -21,6 +24,15 @@ const App = styled.div`
   background: black;
   box-sizing: border-box;
 `
+
+
+const theme = {
+	header: '40px',
+	copy: '20px',
+  background: 'pink'
+}
+
+
 
 const BUILD_TIME = new Date().getTime()
 
@@ -45,6 +57,7 @@ export default class HTML extends React.Component {
     }
 
     return (
+
       <HTML lang="en" style="background:black !important;">
         <head>
           <meta charSet="utf-8" />
@@ -56,6 +69,7 @@ export default class HTML extends React.Component {
           {this.props.headComponents}
         </head>
         <Body>
+          <ThemeProvider theme={theme}>
 
           <App
             id="___gatsby"
@@ -63,7 +77,7 @@ export default class HTML extends React.Component {
           />
 
           {this.props.postBodyComponents}
-
+          </ThemeProvider>
         </Body>
       </HTML>
     )

@@ -5,6 +5,8 @@ const Header = styled.div`
   width: 75%;
   text-align: center;
   margin: 0 auto;
+  margin-bottom: 120px;
+  margin-top: 90px;
 `
 
 const Title = styled.h1`
@@ -12,7 +14,9 @@ const Title = styled.h1`
   font-weight: 700;
   font-family: Lato-Bold;
   font-size: 40px;
+  font-size: ${props => props.theme.header};
   color: #000000;
+  background: ${props => props.theme.background}
   letter-spacing: -0.07px;
   margin-bottom: 50px;
 `

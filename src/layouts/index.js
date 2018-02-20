@@ -6,12 +6,8 @@ import Link from "gatsby-link"
 import Helmet from "react-helmet"
 import styled  from 'styled-components'
 
+import BannerComp from './../components/Banner'
 import FooterComp from './../components/Footer'
-
-const Background = styled.div`
-  height: 100vh;
-  width: 100vw;
-`
 
 const Wrap = styled.div`
 	max-width: 1200px;
@@ -50,17 +46,14 @@ const NavItem = styled.li`
   -webkit-font-smoothing: antialiased;
 `
 
-
 export default class Template extends React.Component {
   static propTypes = {
     children: PropTypes.func,
   }
 
   render() {
-    return (
-      <Background>
-      <Wrap>
-
+		return (
+			<div>
         <Helmet
           title="Aural Youth"
           meta={[
@@ -69,13 +62,15 @@ export default class Template extends React.Component {
           ]}
         />
 
-        <PageRender className='page-render'>
-          {this.props.children()}
-        </PageRender>
+					<BannerComp />
+		      <Wrap>
+		        <PageRender className='page-render'>
+		          {this.props.children()}
+		        </PageRender>
+	  			</Wrap>
+	        <FooterComp />
 
-        <FooterComp />
-      </Wrap>
-    </Background>
+			</div>
     )
   }
 }

@@ -4,7 +4,9 @@ import HeaderComp from './../components/Header'
 export default class Index extends React.Component {
   render () {
     return (
-      <HeaderComp />
+      <div>
+        <HeaderComp />
+      </div>
     )
   }
 }

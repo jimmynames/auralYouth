@@ -125,7 +125,6 @@ const SocialCta = styled.a`
   margin: 0 13px;
 `
 
-
 export default class FooterComp extends React.Component {
   render () {
     return (
