@@ -6,12 +6,11 @@ import Copy from './../../components/Copy'
 
 const ImageText = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: ${props => props.alt ? 'row-reverse' : 'row'};
   justify-content: space-around;
   align-items: center;
   align-content: center;
   height: 440px;
-  max-height: 100vh;
   margin-bottom: 115px;
 
   p {
@@ -21,8 +20,8 @@ const ImageText = styled.div`
   }
 
   @media (max-width: 900px) {
-    flex-direction: column;
-    justify-content: center;
+    display: block;
+    height: auto;
   }
 `
 
@@ -31,10 +30,10 @@ const ImageComp = styled.div`
   width: 45%;
   border: 3px solid black;
   position: relative;
-  display: block;
   @media (max-width: 900px) {
-    width: 66.6666%;
-    margin-bottom: 130px;
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 3em;
   }
 `
 
@@ -44,11 +43,16 @@ const ImageImage = styled.img`
   border: 3px solid black;
 
   position: absolute;
-  top: 10px;
-  left: 10px;
+  ${'' /* top: 10px;
+  left: 10px; */}
+  left: ${props => props.alt ? '' : '10px'};
+  top: ${props => props.alt ? '' : '10px'};
+  right: ${props => props.alt ? '10px' : '0'};
+  bottom: ${props => props.alt ? '10px' : '0'};
 
   @media (max-width: 900px) {
     width: 100%;
+    position: relative;
   }
 `
 
@@ -60,7 +64,6 @@ const CopyComp = styled.div`
   flex-direction: column;
   align-items: flex-start;
   align-content: center;
-
   @media (max-width: 900px) {
     width: 100%;
   }
@@ -69,9 +72,9 @@ const CopyComp = styled.div`
 export default class ImageTextComp extends React.Component {
   render () {
     return (
-      <ImageText>
+      <ImageText alt={this.props.alt}>
         <ImageComp>
-          <ImageImage src={this.props.src} srcSet={this.props.src + ' 1x, ' + this.props.src2x + ' 2x'} />
+          <ImageImage alt={this.props.alt} src={this.props.src} srcSet={this.props.src + ' 1x, ' + this.props.src2x + ' 2x'} />
         </ImageComp>
         <CopyComp>
           <Title>{this.props.title}</Title>

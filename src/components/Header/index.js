@@ -19,7 +19,7 @@ const Header = styled.div`
   margin-bottom: 120px;
   margin-top: 90px;
 
-  @media (max-width: 900px) |{
+  @media (max-width: 900px) {
     width: 100%;
   }
 `

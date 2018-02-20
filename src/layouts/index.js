@@ -59,7 +59,7 @@ export default class Template extends React.Component {
 		          {this.props.children()}
 		        </PageRender>
 	  			</Wrap>
-	        <FooterComp />
+				<FooterComp />
 				</div>
     )
   }

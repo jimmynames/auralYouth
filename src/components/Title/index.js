@@ -16,9 +16,11 @@ const Title = styled.h1`
 
   @media (max-width:589px) {
     font-size: 30px;
+    margin-bottom: 45px;
   }
   @media (max-width:453px) {
     font-size: 26px;
+    margin-bottom: 40px;
   }
 `
 export default Title
