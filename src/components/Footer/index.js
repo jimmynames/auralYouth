@@ -160,7 +160,7 @@ const SocialCta = styled.a`
 export default class FooterComp extends React.Component {
   render () {
     return (
-      <Element name="footer">
+      <Element name="footer" id="footer">
       <Footer>
         <Wrap>
         <Column>

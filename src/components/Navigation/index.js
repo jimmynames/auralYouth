@@ -5,6 +5,7 @@ import Links from './../../components/Links'
 import { Link } from 'react-scroll'
 
 const NavMenu = styled.div`
+  ${'' /* width: 100% !important; */}
   margin: 0;
   padding: 0;
   display: flex;

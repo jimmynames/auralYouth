@@ -1,11 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Link, animateScroll as scroll } from 'react-scroll'
-import { StickyContainer, Sticky } from 'react-sticky'
-
-import Navigation from './../../components/Nav'
-
-// import mouse from './../images/mouse.gif'
+// import Sticky from 'react-stickynode'
+import Navigation from './../../components/Navigation'
 
 const Banner = styled.div`
   height: 100vh;
@@ -27,45 +23,25 @@ const Logo = styled.div`
   align-items: center;
 `
 
-const NavMenu = styled.div`
-  position: relative;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  @media (max-width: 693px) {}
-`
+// const StickyNavWrapper = styled.div`
+//   div {
+//     &:first-child,
+//     &:nth-child(2) {
+//        width: 0px;
+//     }
+//   }
+// `
 
-const NavItem = styled.div`
-  list-style-type: none;
-  margin-left: 3em;
-  font-size: 1.17em;
-  letter-spacing: 1px;
-  -webkit-font-smoothing: antialiased;
-
-  text-decoration: none;
-  color: white;
-  font-family: 'Lato';
-  font-weight: 900;
-  padding-bottom: 13px;
-  border-bottom: 3px solid black;
-  &:hover {
-    cursor: pointer;
-  }
-  &:focus,
-  &:active {
-    border-bottom: 3px solid white;
-    transition: all 0.3s ease-in-out;
-  }
-`
+// const handleStateChange = (status) => {
+//     if (status.status === Sticky.STATUS_FIXED) {
+//         console.log('JIMMY >>>>>> the component is sticky')
+//     }
+// }
 
 export default class BannerComp extends React.Component {
   render () {
     return (
-      <Banner>
+      <Banner id="banner">
         <Empty />
         <Logo>
           <svg width="206px" height="206px" viewBox="0 0 206 206" version="1.1">
@@ -83,29 +59,13 @@ export default class BannerComp extends React.Component {
           </svg>
         </Logo>
 
-    {/* <StickyContainer style={{background: 'pink'}}>
-        <Sticky>
-          {
-            ({
-              style,
-              // the following are also available but unused in this example
-              isSticky,
-              wasSticky,
-              distanceFromTop,
-              distanceFromBottom,
-              calculatedHeight
-            }) => {
-              console.log({ isSticky, wasSticky, distanceFromTop, distanceFromBottom, calculatedHeight })
-
-              return (
-                <header style={style}> */}
-                  <Navigation />
-                {/* </header>
-              )
-            }
-          }
+        {/* <StickyNavWrapper>
+        <Sticky top={50} bottomBoundary='#footer' onStateChange={handleStateChange}>
+          <Navigation />
         </Sticky>
-      </StickyContainer> */}
+      </StickyNavWrapper> */}
+
+        <Navigation />
 
       </Banner>
     )

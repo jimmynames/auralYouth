@@ -94,8 +94,7 @@ export default class ImageTextComp extends React.Component {
           <Title>{this.props.title}</Title>
           <Copy>A forward-looking, sound production collective based in North
             London. We provide technical and creative services for the ever c
-            hanging music industry.  
-          </Copy>
+            hanging music industry.  </Copy>
           <Copy>adapting our skill set to best suit the
             client’s needs. Our team believes creating a professional, yet
             socially interactive and fun working environment ultimately achieves

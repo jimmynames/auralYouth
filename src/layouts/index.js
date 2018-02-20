@@ -5,9 +5,11 @@ import PropTypes from "prop-types"
 import Link from "gatsby-link"
 import Helmet from "react-helmet"
 import styled, {ThemeProvider} from 'styled-components'
-// import { StickyContainer } from 'react-sticky'
+// import { StickyContainer, Sticky } from 'react-sticky'
+
 import BannerComp from './../components/Banner'
 import FooterComp from './../components/Footer'
+import Navigation from './../components/Navigation'
 
 const Wrap = styled.div`
 	max-width: 1200px;
@@ -55,13 +57,36 @@ export default class Template extends React.Component {
 
 					<BannerComp />
 
+					{/* <StickyContainer>
+			<Sticky>
+				{
+					({
+						style,
+
+						// the following are also available but unused in this example
+						isSticky,
+						wasSticky,
+						distanceFromTop,
+						distanceFromBottom,
+						calculatedHeight
+					}) => {
+						return (
+							<header style={style}> */}
+								{/* <Navigation /> */}
+							{/* </header>
+						)
+					}
+				}
+			</Sticky> */}
+
 		      <Wrap className="Wrap">
-		        <PageRender className='page-render'>
+		        <PageRender id="page" className='page-render'>
 		          {this.props.children()}
 		        </PageRender>
 	  			</Wrap>
 
 				<FooterComp />
+				{/* </StickyContainer> */}
 				</div>
     )
   }

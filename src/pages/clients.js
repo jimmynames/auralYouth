@@ -12,7 +12,7 @@ export default class Clients extends React.Component {
       <div>
         <HeaderComp />
 
-        <ImageTextComp src={dude} src2x={dude2x} title="Clients" alt />
+        <ImageTextComp src={dude} src2x={dude2x} title='Clients' alt />
 
         <TestimonialComp />
       </div>
