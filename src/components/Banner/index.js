@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Link, DirectLink, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { Link, animateScroll as scroll } from 'react-scroll'
+import { StickyContainer, Sticky } from 'react-sticky'
 
 import NavMenuComp from './../../components/NavMenu'
 
@@ -27,6 +28,7 @@ const Logo = styled.div`
 `
 
 const NavMenu = styled.div`
+  position: relative;
   margin: 0;
   padding: 0;
   display: flex;
@@ -34,20 +36,12 @@ const NavMenu = styled.div`
   justify-content: center;
   align-items: center;
   align-content: center;
-
-  a {
-    text-decoration: none;
-    color: black;
-    font-family: 'Lato';
-    font-weight: 900;
-  }
-
   @media (max-width: 693px) {}
 `
 
 const NavItem = styled.div`
   list-style-type: none;
-  margin-left: ${props => props.first ? '0' : '3em'};
+  margin-left: 3em;
   font-size: 1.17em;
   letter-spacing: 1px;
   -webkit-font-smoothing: antialiased;
@@ -56,7 +50,7 @@ const NavItem = styled.div`
   color: white;
   font-family: 'Lato';
   font-weight: 900;
-
+  padding-bottom: 16px;
   &:hover {
     cursor: pointer;
   }
@@ -82,14 +76,36 @@ export default class BannerComp extends React.Component {
             </g>
           </svg>
         </Logo>
-        <NavMenu>
 
-          <NavMenuComp />
-          <Link to="footer" spy={true} smooth={true} offset={50} duration={750}>
-            <NavItem>Contact</NavItem>
-          </Link>
+    {/* <StickyContainer style={{background: 'pink'}}>
+        <Sticky>
+          {
+            ({
+              style,
+              // the following are also available but unused in this example
+              isSticky,
+              wasSticky,
+              distanceFromTop,
+              distanceFromBottom,
+              calculatedHeight
+            }) => {
+              console.log({ isSticky, wasSticky, distanceFromTop, distanceFromBottom, calculatedHeight })
 
-        </NavMenu>
+              return (
+                <header style={style}> */}
+                  <NavMenu>
+                    <NavMenuComp />
+                    <Link to="footer" spy={true} smooth={true} offset={50} duration={750}>
+                      <NavItem>Contact</NavItem>
+                    </Link>
+                  </NavMenu>
+                {/* </header>
+              )
+            }
+          }
+        </Sticky>
+      </StickyContainer> */}
+
       </Banner>
     )
   }

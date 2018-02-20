@@ -5,7 +5,7 @@ import PropTypes from "prop-types"
 import Link from "gatsby-link"
 import Helmet from "react-helmet"
 import styled, {ThemeProvider} from 'styled-components'
-
+// import { StickyContainer } from 'react-sticky'
 import BannerComp from './../components/Banner'
 import FooterComp from './../components/Footer'
 
@@ -54,11 +54,13 @@ export default class Template extends React.Component {
         />
 
 					<BannerComp />
+
 		      <Wrap className="Wrap">
 		        <PageRender className='page-render'>
 		          {this.props.children()}
 		        </PageRender>
 	  			</Wrap>
+
 				<FooterComp />
 				</div>
     )

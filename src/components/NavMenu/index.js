@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import Link from 'gatsby-link'
+// import Link from 'gatsby-link'
+import { NavLink } from 'react-router-dom'
 
-const NavMenu = styled.ul`
+const NavMenu = styled.div`
   margin: 0;
   padding: 0;
   display: flex;
@@ -13,41 +14,52 @@ const NavMenu = styled.ul`
 
   a {
     text-decoration: none;
-    color: black;
     font-family: 'Lato';
     font-weight: 900;
+    padding-bottom: 13px;
+
+    list-style-type: none;
+    margin-left: 3em;
+    font-size: 1.17em;
+    letter-spacing: 1px;
+    -webkit-font-smoothing: antialiased;
+
+    text-decoration: none;
+    color: white;
+    font-family: 'Lato';
+    font-weight: 900;
+
+    &:first-child {
+      margin-left: 0;
+    }
   }
 
   @media (max-width: 693px) {}
-`
-
-const NavItem = styled.li`
-  list-style-type: none;
-  margin-left: ${props => props.first ? '0' : '3em'};
-  font-size: 1.17em;
-  letter-spacing: 1px;
-  -webkit-font-smoothing: antialiased;
-
-  text-decoration: none;
-  color: white;
-  font-family: 'Lato';
-  font-weight: 900;
 `
 
 export default class NavMenuComp extends React.Component {
   render () {
     return (
       <NavMenu>
-        <Link to='/'>
-          <NavItem first>About</NavItem>
-        </Link>
-        <Link to='/services/'>
-          <NavItem>Services</NavItem>
-        </Link>
-        <Link to='/services/'>
-          <NavItem>Clients</NavItem>
-        </Link>
-    </NavMenu>
+        <NavLink to='/'
+                 activeStyle={{
+                      borderBottom: '3px solid white',
+                      transition: 'all 0.3s ease-in-out'
+                     }}
+                     >About</NavLink>
+        <NavLink to='/services/'
+                 activeStyle={{
+                      borderBottom: '3px solid white',
+                      transition: 'all 0.3s ease-in-out'
+                     }}
+                     >Services</NavLink>
+         <NavLink to='/clients/'
+                  activeStyle={{
+                       borderBottom: '3px solid white',
+                       transition: 'all 0.3s ease-in-out'
+                      }}
+                      >Clients</NavLink>
+      </NavMenu>
     )
   }
 }
