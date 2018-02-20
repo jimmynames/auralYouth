@@ -41,7 +41,7 @@ export default class NavMenuComp extends React.Component {
   render () {
     return (
       <NavMenu>
-        <NavLink to='/'
+        <NavLink exact to='/'
                  activeStyle={{
                       borderBottom: '3px solid white',
                       transition: 'all 0.3s ease-in-out'
