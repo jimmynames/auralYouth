@@ -35,6 +35,13 @@ const H3 = styled.h3`
   color: #FFFFFF;
   letter-spacing: -0.05px;
   margin: 0;
+
+  @media (max-width:589px) {
+    font-size: 24px;
+  }
+  @media (max-width:453px) {
+    font-size: 22px;
+  }
 `
 const P = styled.p`
   font-family: 'Lato';
@@ -43,6 +50,13 @@ const P = styled.p`
   letter-spacing: -0.04px;
   text-align: center;
   margin: 0;
+
+  @media (max-width:589px) {
+    font-size: 20px;
+  }
+  @media (max-width:453px) {
+    font-size: 18px;
+  }
 `
 
 const Column = styled.div`
