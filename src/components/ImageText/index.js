@@ -30,7 +30,7 @@ const ImageText = styled.div`
 
 const ImageComp = styled.div`
   height: 100%;
-  width: 45%;
+  width: 440px;
   border: 3px solid black;
   position: relative;
   @media (max-width: 900px) {
