@@ -6,7 +6,7 @@ import { Link } from 'react-scroll'
 
 var styles = {
   bmBurgerButton: {
-    position: 'absolute',
+    position: 'fixed',
     width: '20px',
     height: '15px',
     right: '30px',
@@ -31,7 +31,8 @@ var styles = {
     'z-index': '4 !important'
   },
   bmMenuWrap: {
-    transition: 'all 0.333s'
+    transition: 'all 0.333s',
+    position: 'fixed'
   },
   bmMorphShape: {
     fill: 'white'
