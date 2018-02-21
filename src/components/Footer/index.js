@@ -143,6 +143,11 @@ const ConnectCta = styled.a`
         &:hover {
           transform: scale(1.02666);
         }
+        &:active,
+        &:focus {
+          transform: scale(1);
+          outline: none;
+        }
 
         @media (max-width: 674px) {
           margin-top: 17.5px;
@@ -153,7 +158,12 @@ const SocialCta = styled.div`
     margin: 0 13px;
     transition: all .2s ease-in-out;
     &:hover {
-      transform: scale(1.13666);
+      transform: scale(1.23666);
+    }
+    &:active,
+    &:focus {
+      transform: scale(1);
+      outline: none;
     }
 `
 
@@ -171,7 +181,7 @@ export default class FooterComp extends React.Component {
             <P>For more information on the services we offer get in touch by email or phone.</P>
           </Row2>
           <Row3 flex>
-            <ConnectCta href="">
+            <ConnectCta href="mailto:info@auralyouth.co.uk">
               <svg width="27px" height="17px" viewBox="0 0 27 17" version="1.1">
                   <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                       <g id="Home-page" transform="translate(-359.000000, -2323.000000)" fill="#FFFFFF" fill-rule="nonzero">
@@ -190,7 +200,7 @@ export default class FooterComp extends React.Component {
                 <p>info@auralyouth.co.uk</p>
             </ConnectCta>
 
-            <ConnectCta href="">
+            <ConnectCta href="tel:+447595484005">
               <svg width="21px" height="21px" viewBox="0 0 21 21" version="1.1">
                   <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                       <g id="Home-page" transform="translate(-689.000000, -2322.000000)" fill="#FFFFFF">
