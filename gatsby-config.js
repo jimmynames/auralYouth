@@ -5,31 +5,30 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
-    // `gatsby-plugin-favicon`,
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [ `Lato` ]
       }
+    },
+    {
+      resolve: `gatsby-plugin-favicon`,
+      options: {
+        logo: './src/favicon.png',
+        injectHTML: true,
+        icons: {
+          android: false,
+          appleIcon: true,
+          appleStartup: false,
+          coast: true,
+          favicons: true,
+          firefox: false,
+          twitter: false,
+          yandex: false,
+          windows: true
+        }
+      }
     }
-    // {
-    //   resolve: `gatsby-plugin-favicon`,
-    //   options: {
-    //     logo: './src/favicon.png',
-    //     injectHTML: true,
-    //     icons: {
-    //       android: true,
-    //       appleIcon: true,
-    //       appleStartup: true,
-    //       coast: false,
-    //       favicons: true,
-    //       firefox: true,
-    //       twitter: false,
-    //       yandex: false,
-    //       windows: false
-    //     }
-    //   }
-    // }
     // {
     //   resolve: `gatsby-plugin-google-analytics`,
     //   options: {
