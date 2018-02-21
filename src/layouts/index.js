@@ -7,12 +7,15 @@ import Helmet from "react-helmet"
 import styled, { ThemeProvider, injectGlobal } from 'styled-components'
 // import { StickyContainer, Sticky } from 'react-sticky'
 
+import withRouter from 'react-router-dom/withRouter'
+import { TransitionGroup, CSSTransition } from 'react-transition-group'
+
 import { Wrap } from './../components/Wrap'
 import BannerComp from './../components/Banner'
 import FooterComp from './../components/Footer'
 import Navigation from './../components/Navigation'
 
-
+import './animations.css'
 
 injectGlobal`
   body {
@@ -39,13 +42,28 @@ const Container = styled.div`
 //   background: 'pink'
 // }
 
-export default class Template extends React.Component {
-  static propTypes = {
-    children: PropTypes.func,
+class TransitionHandler extends React.Component {
+  shouldComponentUpdate(nextProps, nextState) {
+    return this.props.location.pathname === window.location.pathname;
   }
 
   render() {
-		return (
+    const {children} = this.props;
+    return (
+      <div className="transition-container">
+        {children}
+      </div>
+    );
+  }
+}
+
+const TemplateWrapper = ({ children, location }) => (
+  // static propTypes = {
+  //   children: PropTypes.func,
+  // }
+  //
+  // render() {
+	// 	return (
 
 			<div>
     		<Helmet
@@ -81,13 +99,31 @@ export default class Template extends React.Component {
 			</Sticky> */}
 
 
-		        <PageRender id="page" className='page-render'>
-		          {this.props.children()}
-		        </PageRender>
+		        {/* <PageRender id="page" className='page-render'> */}
+						<TransitionGroup>
+      <CSSTransition
+          key={location.pathname}
+          classNames="example"
+          timeout={{ enter: 500, exit: 300 }}
+      >
+        <TransitionHandler
+            location={location}
 
-				<FooterComp />
+        >
+					<PageRender>
+		          {children()}
+		        </PageRender>
+						<FooterComp />
+					</TransitionHandler>
+	 		</CSSTransition>
+ 		</TransitionGroup>
+
 				{/* </StickyContainer> */}
 				</div>
     )
-  }
+
+TemplateWrapper.propTypes = {
+  children: PropTypes.func
 }
+
+export default withRouter(TemplateWrapper)
