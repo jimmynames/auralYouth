@@ -30,11 +30,12 @@ const NavMenu = styled.div`
     color: white;
     font-family: 'Lato';
     font-weight: 900;
-    border-bottom: 3px solid black;
+    border-bottom: 3px solid transparent;
+
     &:first-child {
       margin-left: 0;
     }
-
+    &:hover, 
     &:active,
     &:focus {
       border-bottom: 3px solid white;

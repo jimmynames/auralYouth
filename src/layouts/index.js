@@ -55,7 +55,7 @@ export default class Template extends React.Component {
           ]}
         />
 
-					<BannerComp />
+					{/* <BannerComp /> */}
 
 					{/* <StickyContainer>
 			<Sticky>
@@ -79,11 +79,10 @@ export default class Template extends React.Component {
 				}
 			</Sticky> */}
 
-		      <Wrap className="Wrap">
+
 		        <PageRender id="page" className='page-render'>
 		          {this.props.children()}
 		        </PageRender>
-	  			</Wrap>
 
 				<FooterComp />
 				{/* </StickyContainer> */}
