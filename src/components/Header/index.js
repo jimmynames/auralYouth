@@ -38,7 +38,7 @@ export default class HeaderComp extends React.Component {
     return (
       <HeaderWrapper>
         <Header>
-          <Title>Technical and creative audio services for  the modern music industy.</Title>
+          <Title>Technical and creative audio services for the modern music industy.</Title>
 
           <SVG width="485px" height="35px" viewBox="0 0 485 35" version="1.1">
               <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
