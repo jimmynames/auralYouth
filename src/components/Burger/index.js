@@ -129,7 +129,7 @@ export default class BurgerComp extends React.Component {
                         >Clients</NavLink>
             <Link onClick={() => this.closeMenu()}
                   to='footer'
-                  spy smooth offset={50} duration={750}>
+                  spy smooth  delay={666} offset={50} duration={750}>
               Contact
             </Link>
         </Menu>
