@@ -3,6 +3,7 @@ import styled from 'styled-components'
 // import Sticky from 'react-stickynode'
 import Navigation from './../../components/Navigation'
 
+
 const Banner = styled.div`
   height: 100vh;
   background: black;

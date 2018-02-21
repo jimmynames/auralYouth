@@ -5,7 +5,7 @@ import withRouter from 'react-router-dom/withRouter'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import styled, { ThemeProvider, injectGlobal } from 'styled-components'
 // import { StickyContainer, Sticky } from 'react-sticky'
-
+import BurgerComp from './../components/Burger'
 // import FooterComp from './../components/Footer'
 
 import './animations.css'
@@ -24,6 +24,10 @@ const PageRender = styled.div`
 	background: white;
   @media (max-width: 693px) {}
   @media (max-width: 414px) {}
+`
+
+const OuterContainer = styled.div`
+  ${'' /* position: relative; */}
 `
 
 // const theme = {
@@ -48,7 +52,7 @@ class TransitionHandler extends React.Component {
 }
 
 const TemplateWrapper = ({ children, location }) => (
-		<div>
+		<OuterContainer id="outer-container">
     	<Helmet
       title='Aural Youth'
       meta={[
@@ -56,6 +60,7 @@ const TemplateWrapper = ({ children, location }) => (
             { name: 'keywords', content: 'Aural Youth' }
       ]}
         />
+        <BurgerComp />
 				<TransitionGroup>
       		<CSSTransition
           key={location.pathname}
@@ -65,14 +70,14 @@ const TemplateWrapper = ({ children, location }) => (
         		<TransitionHandler
             location={location}
         >
-							<PageRender>
+							<PageRender id="page-wrap">
 		          	{children()}
 		        	</PageRender>
 						</TransitionHandler>
 	 			</CSSTransition>
  		</TransitionGroup>
 				{/* </StickyContainer> */}
-				</div>
+				</OuterContainer>
     )
 
 TemplateWrapper.propTypes = {
