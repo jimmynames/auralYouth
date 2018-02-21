@@ -6,7 +6,6 @@ const Title = styled.h1`
 -webkit-margin-after: 0;
   font-family: 'Lato', sans-serif;
   font-weight: 700;
-  font-family: Lato-Bold;
   font-size: 40px;
   ${'' /* font-size: ${props => props.theme.header}; */}
   color: #000000;

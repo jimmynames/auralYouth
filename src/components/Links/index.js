@@ -14,7 +14,7 @@ const NavMenu = styled.div`
 
   a {
     text-decoration: none;
-    font-family: 'Lato';
+    font-family: 'Lato', sans-serif;
     font-weight: 900;
     padding-bottom: 13px;
 
@@ -26,7 +26,7 @@ const NavMenu = styled.div`
 
     text-decoration: none;
     color: white;
-    font-family: 'Lato';
+    font-family: 'Lato', sans-serif;
     font-weight: 900;
 
     &:first-child {

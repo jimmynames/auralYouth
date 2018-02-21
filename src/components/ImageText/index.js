@@ -11,8 +11,9 @@ const ImageText = styled.div`
   justify-content: space-around;
   align-items: center;
   align-content: center;
+  min-height: 440px;
   height: 440px;
-  margin-bottom: 115px;
+  margin-bottom: 145px;
 
   p {
     &:last-child {
@@ -29,25 +30,22 @@ const ImageText = styled.div`
 `
 
 const ImageComp = styled.div`
-  height: 100%;
+  height: 440px;
   width: 440px;
   border: 3px solid black;
   position: relative;
+  transition: all .3s ease-in-out;
   @media (max-width: 900px) {
-    width: 66.6%;
+    ${'' /* width: 66.6%; */}
     margin: 0 auto;
     margin-bottom: 3em;
-    transition: all .3s ease-in-out;
   }
   @media (max-width: 750px) {
-    width: 70%;
-    margin: 0 auto;
-    margin-bottom: 3em;
-    transition: all .3s ease-in-out;
+    ${'' /* width: 70%; */}
+    height: auto;
   }
   @media (max-width: 500px) {
     width: 90%;
-    transition: all .3s ease-in-out;
   }
 `
 

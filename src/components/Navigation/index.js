@@ -16,7 +16,7 @@ const NavMenu = styled.div`
 
   a {
     text-decoration: none;
-    font-family: 'Lato';
+    font-family: 'Lato', sans-serif;
     font-weight: 900;
     padding-bottom: 13px;
 
@@ -29,7 +29,7 @@ const NavMenu = styled.div`
     text-decoration: none;
     text-transform: uppercase;
     color: white;
-    font-family: 'Lato';
+    font-family: 'Lato', sans-serif;
     font-weight: 900;
     border-bottom: 3px solid transparent;
 
@@ -46,6 +46,10 @@ const NavMenu = styled.div`
 
   @media (max-width: 560px) {
     visibility: hidden;
+    transition: visibility .3s ease-in-out;
+    div, a {
+      width: 1px;
+    }
   }
 `
 

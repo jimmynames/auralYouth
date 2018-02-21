@@ -28,7 +28,7 @@ const Wrap = styled.div`
 `
 
 const H3 = styled.h3`
-  font-family: 'Lato';
+  font-family: 'Lato', sans-serif;
   font-weight: 900;
   font-size: 28px;
   color: #FFFFFF;
@@ -43,7 +43,7 @@ const H3 = styled.h3`
   }
 `
 const P = styled.p`
-  font-family: 'Lato';
+  font-family: 'Lato', sans-serif;
   font-size: 22px;
   color: #FFFFFF;
   letter-spacing: -0.04px;
@@ -52,6 +52,8 @@ const P = styled.p`
 
   @media (max-width:589px) {
     font-size: 20px;
+    width: 80%;
+    margin: 0 auto;
   }
   @media (max-width:453px) {
     font-size: 18px;
@@ -133,7 +135,7 @@ const ConnectCta = styled.a`
 
         p {
           margin: 0;
-          font-family: 'Lato';
+          font-family: 'Lato', sans-serif;
           font-weight: 900;
           font-size: 20px;
           color: #FFFFFF;
