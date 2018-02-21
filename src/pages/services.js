@@ -8,14 +8,14 @@ import ImageTextComp from './../components/ImageText'
 
 import dude from './../images/dude.jpg'
 import dude2x from './../images/dude@2x.jpg'
-import aboutBackground from './../images/dude.jpg'
-import aboutBackground2x from './../images/dude@2x.jpg'
+import servicesBackground from './../images/servicesHero.jpg'
+import servicesBackground2x from './../images/servicesHero@2x.jpg'
 
 export default class Services extends React.Component {
-  render () {
+  render () {services
     return (
       <div>
-        <BannerComp background={aboutBackground} />
+        <BannerComp background={servicesBackground} background2x={servicesBackground2x} />
         <Wrap className="Wrap">
         <HeaderComp />
         <ImageTextComp src={dude} src2x={dude2x} title='Live content production' para1="At the forefront of our workload, we specialise in the audio recording of live content for online promotion. Whether it’s a gig, live video session or other creative concept, we will work with you to capture your live “Vibe” and produce it to a professional standard." para2='For the complete audio & visual package, we have a unique relationship with ROPO films;  a video production team whom we have worked with extensively to create a wide range of creative content. Please feel free to contact us for our different services and rates.'  />

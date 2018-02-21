@@ -6,8 +6,8 @@ import { Wrap } from './../components/Wrap'
 import HeaderComp from './../components/Header'
 import ImageTextComp from './../components/ImageText'
 
-import aboutBackground from './../images/dude.jpg'
-import aboutBackground2x from './../images/dude@2x.jpg'
+import aboutBackground from './../images/aboutHero.jpg'
+import aboutBackground2x from './../images/aboutHero@2x.jpg'
 import dude from './../images/dude.jpg'
 import dude2x from './../images/dude@2x.jpg'
 
@@ -16,7 +16,7 @@ export default class Index extends React.Component {
   render () {
     return (
       <div>
-        <BannerComp background={aboutBackground} />
+        <BannerComp background={aboutBackground} background2x={aboutBackground2x} />
         <Wrap className="Wrap">
         <HeaderComp />
         <ImageTextComp src={dude} src2x={dude2x} title='About' para1='A forward-looking, sound production collective based in North London. We provide content production and technical services for the ever changing music industry, adapting our skill set to best suit the client’s needs. Go to the “Services” section of our website to see what we have to offer.

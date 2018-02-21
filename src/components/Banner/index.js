@@ -13,10 +13,17 @@ const Banner = styled.div`
   justify-content: space-around;
   align-items: center;
   align-content: center;
+  background-image: url(${props => props.background})}};
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   padding: 0 !important;
+
+  @media
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi) {
+    background-image: url(${props => props.background2x})}} !important;
+  }
 `
 
 const Empty = styled.div``
@@ -46,12 +53,12 @@ const Logo = styled.div`
 //     }
 // }
 
-
+// inline background style image style={{ backgroundImage: `url(${this.props.background})`}}
 
 export default class BannerComp extends React.Component {
   render () {
     return (
-      <Banner id="banner" style={{ backgroundImage: `url(${this.props.background})`}}>
+      <Banner id="banner" background2x={this.props.background2x} background={this.props.background} >
         <Empty />
         <Logo>
           <svg width="206px" height="206px" viewBox="0 0 206 206" version="1.1">
