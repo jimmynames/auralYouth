@@ -21,16 +21,12 @@ const ClientIcons = styled.div`
   flex-wrap: wrap;
   width: 100%;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   align-content: center;
 
   @media (max-width: 1101px) {
     justify-content: center;
-
-    img {
-      padding: 16px 35px;
-    }
   }
 `
 
@@ -43,7 +39,27 @@ const ClientIconsWrapper = styled.div`
   }
 `
 
-const ClientIcon = styled.img``
+const ClientIcon = styled.img`
+  margin: 50px 35px;
+  &:first-child {
+    margin-left: 0;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @media (max-width: 585px) {
+    margin-left: 100%;
+    margin-right: 100%;
+
+    &:first-child {
+      margin-left: 100%;
+    }
+    &:last-child {
+      margin-right: 100%;
+    }
+  }
+`
 
 export default class ClientIconsComp extends React.Component {
   render () {
