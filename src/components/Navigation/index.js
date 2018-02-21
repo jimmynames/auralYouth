@@ -27,6 +27,7 @@ const NavMenu = styled.div`
     -webkit-font-smoothing: antialiased;
 
     text-decoration: none;
+    text-transform: uppercase;
     color: white;
     font-family: 'Lato';
     font-weight: 900;
@@ -35,7 +36,7 @@ const NavMenu = styled.div`
     &:first-child {
       margin-left: 0;
     }
-    &:hover, 
+    &:hover,
     &:active,
     &:focus {
       border-bottom: 3px solid white;

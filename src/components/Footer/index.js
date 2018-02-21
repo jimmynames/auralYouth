@@ -165,6 +165,12 @@ const SocialCta = styled.div`
       transform: scale(1);
       outline: none;
     }
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
 `
 
 export default class FooterComp extends React.Component {
