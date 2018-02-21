@@ -17,7 +17,9 @@ var styles = {
   },
   bmCrossButton: {
     height: '24px',
-    width: '24px'
+    width: '24px',
+    top: '8%',
+    right: '10%'
   },
   bmCross: {
     background: 'white'
@@ -29,7 +31,7 @@ var styles = {
     'z-index': '4 !important'
   },
   bmMenuWrap: {
-    transition: 'all 0.2s'
+    transition: 'all 0.333s'
   },
   bmMorphShape: {
     fill: 'white'
