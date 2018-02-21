@@ -4,26 +4,27 @@ import React from "react"
 import PropTypes from "prop-types"
 import Link from "gatsby-link"
 import Helmet from "react-helmet"
-import styled, {ThemeProvider} from 'styled-components'
+import styled, { ThemeProvider, injectGlobal } from 'styled-components'
 // import { StickyContainer, Sticky } from 'react-sticky'
 
+import { Wrap } from './../components/Wrap'
 import BannerComp from './../components/Banner'
 import FooterComp from './../components/Footer'
 import Navigation from './../components/Navigation'
 
-const Wrap = styled.div`
-	max-width: 1200px;
-  margin: 0 auto;
-	@media (max-width: 900px) {
-		padding-left: 5%;
-		padding-right: 5%;
-	}
+
+
+injectGlobal`
+  body {
+    background: black;
+  }
 `
+
 
 const PageRender = styled.div`
   width: 100%;
   height: 100%;
-
+	background: white;
   @media (max-width: 693px) {}
   @media (max-width: 414px) {}
 `
