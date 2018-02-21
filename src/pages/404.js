@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Wrap } from './../components/Wrap'
 
 const Four = styled.div`
   width: 100%;
@@ -21,7 +22,9 @@ export default class FourOhFour extends React.Component {
   render () {
     return (
       <Four>
-        <Oh>404</Oh>
+        <Wrap>
+          <Oh>404</Oh>
+        </Wrap>
       </Four>
     )
   }

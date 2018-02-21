@@ -1,22 +1,16 @@
 import React from 'react'
 import styled, {ThemeProvider} from 'styled-components'
 
+import BannerComp from './../components/Banner'
+import { Wrap } from './../components/Wrap'
 import HeaderComp from './../components/Header'
 import ImageTextComp from './../components/ImageText'
-import BannerComp from './../components/Banner'
+
 import aboutBackground from './../images/dude.jpg'
 import aboutBackground2x from './../images/dude@2x.jpg'
 import dude from './../images/dude.jpg'
 import dude2x from './../images/dude@2x.jpg'
 
-const Wrap = styled.div`
-	max-width: 1200px;
-  margin: 0 auto;
-	@media (max-width: 900px) {
-		padding-left: 5%;
-		padding-right: 5%;
-	}
-`
 
 export default class Index extends React.Component {
   render () {
