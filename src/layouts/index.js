@@ -36,6 +36,13 @@ const OuterContainer = styled.div`
 //   background: 'pink'
 // }
 
+const TransitionContainer = styled.div`
+  ${'' /* height: 100%; */}
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
 class TransitionHandler extends React.Component {
   shouldComponentUpdate (nextProps, nextState) {
     return this.props.location.pathname === window.location.pathname
@@ -44,9 +51,9 @@ class TransitionHandler extends React.Component {
   render () {
     const {children} = this.props
     return (
-      <div className='transition-container'>
+      <TransitionContainer className='transition-container'>
         {children}
-      </div>
+      </TransitionContainer>
     )
   }
 }

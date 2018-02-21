@@ -4,18 +4,19 @@ import { Wrap } from './../components/Wrap'
 
 const Four = styled.div`
   width: 100%;
+  height: 100%;
   box-sizing: border-box;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   align-content: center;
-  background: white;
+  background: black;
 `
 
 const Oh = styled.h1`
   font-size: 166.6px;
-  color: black;
+  color: white;
   font-family: 'Lato', sans-serif;
 `
 export default class FourOhFour extends React.Component {
