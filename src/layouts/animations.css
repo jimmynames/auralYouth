@@ -5,6 +5,7 @@
 
 .transition-container {
   position: absolute;
+  width: 100%;
 }
 
 .example-enter {
