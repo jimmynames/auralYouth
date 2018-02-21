@@ -28,6 +28,15 @@ module.exports = {
           windows: true
         }
       }
+    },
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        // Setting a color is optional.
+        color: `pink`,
+        // Disable the loading spinner.
+        showSpinner: true
+      }
     }
     // {
     //   resolve: `gatsby-plugin-google-analytics`,
