@@ -6,7 +6,7 @@ import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import styled, { ThemeProvider, injectGlobal } from 'styled-components'
 // import { StickyContainer, Sticky } from 'react-sticky'
 
-import FooterComp from './../components/Footer'
+// import FooterComp from './../components/Footer'
 
 import './animations.css'
 
@@ -21,7 +21,7 @@ injectGlobal`
 const PageRender = styled.div`
   width: 100%;
   height: 100%;
-background: white;
+	background: white;
   @media (max-width: 693px) {}
   @media (max-width: 414px) {}
 `
@@ -38,7 +38,7 @@ class TransitionHandler extends React.Component {
   }
 
   render () {
-    const {children} = this.props;
+    const {children} = this.props
     return (
       <div className='transition-container'>
         {children}
@@ -68,7 +68,6 @@ const TemplateWrapper = ({ children, location }) => (
 							<PageRender>
 		          	{children()}
 		        	</PageRender>
-							<FooterComp />
 						</TransitionHandler>
 	 			</CSSTransition>
  		</TransitionGroup>

@@ -5,6 +5,7 @@ import BannerComp from './../components/Banner'
 import { Wrap } from './../components/Wrap'
 import HeaderComp from './../components/Header'
 import ImageTextComp from './../components/ImageText'
+import FooterComp from './../components/Footer'
 
 import dude from './../images/dude.jpg'
 import dude2x from './../images/dude@2x.jpg'
@@ -26,6 +27,7 @@ export default class Services extends React.Component {
           <ImageTextComp src={buttons} src2x={buttons2x} title='Studio based recording and  production' para1='Our true passion, we love to record and produce acts in the studio environment! Let us help you create, record and produce your musical vision to the best quality it can be.' para2='We have access to our own studio, we can come to a studio of your choice - or for the more ambitious projects we can turn various spaces into a recording studio.' alt />
           <ImageTextComp src={amp} src2x={amp2x} title='Sound engineering & location recording' para1='We have a whole team of dedicated engineers under our belt, and can cater to your live, pre and post production engineering needs.' para2=' Furthermore, we have worked with film and advertising companies for location audio recording for video. Whatever your needs, get in touch.' />
         </Wrap>
+        <FooterComp />
       </div>
     )
   }

@@ -7,6 +7,7 @@ import HeaderComp from './../components/Header'
 import ImageTextComp from './../components/ImageText'
 import TestimonialComp from './../components/Testimonials'
 import ClientIconsComp from './../components/ClientIcons'
+import FooterComp from './../components/Footer'
 
 import squad from './../images/squad.jpg'
 import squad2x from './../images/squad@2x.jpg'
@@ -24,6 +25,7 @@ export default class Clients extends React.Component {
           <TestimonialComp />
           <ClientIconsComp />
         </Wrap>
+        <FooterComp />
       </div>
     )
   }
