@@ -211,7 +211,7 @@ export default class FooterComp extends React.Component {
           </Row3>
 
           <Row4 flex>
-            <SocialCta href="">
+            <SocialCta id="insta" target='_blank' rel='noopener' href="https://www.instagram.com/auralyouth/">
               <svg width="25px" height="25px" viewBox="0 0 25 25" version="1.1">
                   <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                       <g id="Home-page" transform="translate(-612.000000, -2393.000000)" fill="#FFFFFF" fill-rule="nonzero">
@@ -229,7 +229,8 @@ export default class FooterComp extends React.Component {
               </svg>
             </SocialCta>
 
-            <SocialCta href="">
+
+            <SocialCta id="fb" target='_blank' rel='noopener' href='https://www.facebook.com/auralyouth/'>
               <svg width="25px" height="25px" viewBox="0 0 25 25" version="1.1">
                   <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                       <g id="Home-page" transform="translate(-663.000000, -2393.000000)" fill="#FEFEFE">
