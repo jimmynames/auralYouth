@@ -12,7 +12,7 @@ import servicesBackground from './../images/servicesHero.jpg'
 import servicesBackground2x from './../images/servicesHero@2x.jpg'
 
 export default class Services extends React.Component {
-  render () {services
+  render () {
     return (
       <div>
         <BannerComp background={servicesBackground} background2x={servicesBackground2x} />
