@@ -14,7 +14,7 @@ var styles = {
     padding: '5px'
   },
   bmBurgerBars: {
-    background: 'black'
+    background: 'white'
   },
   bmCrossButton: {
     height: '24px',
