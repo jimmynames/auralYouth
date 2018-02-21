@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
+// import Img from 'gatsby-image'
 import Title from './../../components/Title'
 import Copy from './../../components/Copy'
 
