@@ -6,7 +6,7 @@ import { Link } from 'react-scroll'
 
 var styles = {
   bmBurgerButton: {
-    position: 'fixed',
+    position: 'absolute',
     width: '20px',
     height: '15px',
     right: '30px',
@@ -31,8 +31,8 @@ var styles = {
     'z-index': '4 !important'
   },
   bmMenuWrap: {
-    transition: 'all 0.333s',
-    position: 'fixed'
+    transition: 'all 0.333s'
+    // position: 'fixed'
   },
   bmMorphShape: {
     fill: 'white'
@@ -49,6 +49,7 @@ var styles = {
 }
 
 const BurgerMenuComp = styled.div`
+  opacity: 0;
 
   .bm-item-list a {
     padding: 1.5rem 0 0 0;
@@ -73,6 +74,21 @@ const BurgerMenuComp = styled.div`
         bottom: -16px;
         left: 0;
       }
+    }
+  }
+
+  .bm-menu-wrap + div {
+    width: 100%;
+    position: fixed;
+    height: 100%;
+  }
+
+  @media (max-width: 736px) {
+    opacity: 1;
+    transition: all 1s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
     }
   }
 `

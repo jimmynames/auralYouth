@@ -44,7 +44,9 @@ const NavMenu = styled.div`
     }
   }
 
-  @media (max-width: 693px) {}
+  @media (max-width: 560px) {
+    visibility: hidden;
+  }
 `
 
 const NavJump = styled.div`
