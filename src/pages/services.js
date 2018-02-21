@@ -10,7 +10,7 @@ export default class Services extends React.Component {
     return (
       <div>
         <HeaderComp />
-        <ImageTextComp src={dude} src2x={dude2x} title='Clients' />
+        <ImageTextComp src={dude} src2x={dude2x} title='hhhhhhhh'  />
         <ImageTextComp src={dude} src2x={dude2x} title='Clients' alt />
         <ImageTextComp src={dude} src2x={dude2x} title='Clients' />
       </div>

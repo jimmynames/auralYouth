@@ -73,7 +73,7 @@ const CopyComp = styled.div`
   height: 100%;
   width: 45%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
   align-items: flex-start;
   align-content: center;

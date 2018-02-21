@@ -26,6 +26,11 @@ const Header = styled.div`
 
 const SVG = styled.svg`
   width: 100%;
+
+  #Line-2,
+  #Line-2-Copy {
+    stroke-width: 2px;
+  }
 `
 
 export default class HeaderComp extends React.Component {
