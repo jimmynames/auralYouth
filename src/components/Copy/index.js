@@ -9,7 +9,7 @@ const Copy = styled.p`
   -webkit-margin-before: 0;
   -webkit-margin-after: 0;
   margin-bottom: 32px;
-
+  width: 100%;
   @media (max-width:589px) {
     font-size: 18px;
   }
