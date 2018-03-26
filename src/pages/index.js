@@ -24,7 +24,7 @@ export default class Index extends React.Component {
             src={keys}
             src2x={keys2x}
             title='About'
-            para1='A forward-looking, sound production collective based in North London. We provide content production and technical services for the ever changing music industry, adapting our skill set to best suit the client’s needs. Go to the “Services” section of our website to see what we have to offer.' />
+            para1='A forward-looking, sound production collective based in North London. We provide content production and technical services for the ever changing music industry, adapting our skill set to best suit the client’s needs. Go to the “Services” section of our website to see what we have to offer' />
           <ImageTextComp
             alt
             src={dudes}
