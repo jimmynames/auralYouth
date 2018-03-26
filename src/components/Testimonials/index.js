@@ -42,7 +42,7 @@ export default class TestimonialComp extends React.Component {
              friendly, professional and reliable bunch who have saved us from chaos
               on many occasions and continue to make each show run smoothly even when
                 it means getting pretty creative.'
-            source="Adam Maestro"
+            source="Adam Maestro - Head of booking at Sofar Sounds"
           />
         </Testimonials>
       </TestimonialWrapper>
